@@ -1,0 +1,23 @@
+.rkFaqList1-01 {
+  li {
+    @extend %padd--4;
+    margin-bottom: 4px;
+    background-color: #ccc;
+  }
+
+  .rkFaqList1-01_title {
+    // @extend %display--inline-block;
+    @extend %font--bold;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+  }
+
+  span {
+    @extend %display--inline-block;
+    @extend %font--bold;
+    border-radius: 2px;
+    background-color: #666;
+    color: #fff;
+  }
+}
