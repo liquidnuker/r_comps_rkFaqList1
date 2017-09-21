@@ -2,11 +2,19 @@
 function ToggleIcon(props) {
   if (!props.pr_toggled) {
     return (
-      <span>+</span>
+      <span className="rkFaqList101_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+      </svg>
+      </span>
     );
   } else {
     return (
-      <span>-</span>
+      <span className="rkFaqList101_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M19 13H5v-2h14v2z"/>
+      </svg>
+      </span>
     );
   }
 }
@@ -14,7 +22,7 @@ function ToggleIcon(props) {
 function Content(props) {
   if (props.pr_toggled) {
     return (
-      <p>
+      <p className="rkFaqList101_ans">
         {props.pr_content}
       </p>
     );
@@ -71,11 +79,11 @@ export default class RkFaqList1_01 extends React.Component {
   render() {
     const faqList = this.state.faqList;
     return (
-      <article className="rkFaqList1-01">
+      <article className="rkFaqList101">
       <ul>
         {faqList.map((i, index) =>
           <li>
-          <h2 className="rkFaqList1-01_title" onClick={() => { this.toggleContent(index) }}>
+          <h2 className="rkFaqList101_title" onClick={() => { this.toggleContent(index) }}>
             {i.title}
             <ToggleIcon pr_toggled={faqList[index].toggled} />
           </h2>          
