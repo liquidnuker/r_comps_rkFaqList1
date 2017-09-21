@@ -84,8 +84,8 @@ export default class RkFaqList1_01 extends React.Component {
         {faqList.map((i, index) =>
           <li>
           <h2 className="rkFaqList101_title" onClick={() => { this.toggleContent(index) }}>
-            {i.title}
             <ToggleIcon pr_toggled={faqList[index].toggled} />
+            {i.title}            
           </h2>          
           <section>
             <Content pr_toggled={faqList[index].toggled} 
