@@ -60,9 +60,8 @@ export default class RkFaqList1_01 extends React.Component {
   
   // methods
   toggleAllContent(visible) {
-    let faqList= this.state.faqList;
-    for (let i in faqList) {
-      faqList[i].toggled = visible;
+    for (let i in this.state.faqList) {
+      this.state.faqList[i].toggled = visible;
     }
   }
 
@@ -84,11 +83,13 @@ export default class RkFaqList1_01 extends React.Component {
         {faqList.map((i, index) =>
           <li>
           <h2 className="rkFaqList101_title" onClick={() => { this.toggleContent(index) }}>
-            <ToggleIcon pr_toggled={faqList[index].toggled} />
+            <ToggleIcon 
+            pr_toggled={faqList[index].toggled} />
             {i.title}            
           </h2>          
           <section>
-            <Content pr_toggled={faqList[index].toggled} 
+            <Content 
+            pr_toggled={faqList[index].toggled} 
             pr_content={faqList[index].content} />
           </section>
         </li>
